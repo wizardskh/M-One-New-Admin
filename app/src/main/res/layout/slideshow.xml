@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <LinearLayout
+        android:layout_margin="30dp"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_close"
+            android:tint="@color/errorColor"
+            android:layout_gravity="right"/>
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Slide 1"
+            android:padding="10dp"/>
+        <EditText
+            style="@style/TextStyle"
+            android:background="@drawable/edtbg"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/edts1"
+            android:hint="Slide 1"
+            android:paddingLeft="10dp"
+            />
+        <LinearLayout
+            android:id="@+id/imagepanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Slide 2"
+                android:padding="10dp"/>
+
+            <EditText
+                android:id="@+id/edts2"
+                style="@style/TextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edtbg"
+                android:hint="Slide 2"
+                android:paddingLeft="10dp" />
+        </LinearLayout>
+        <TextView
+            style="@style/TextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Slide 3"
+            android:padding="10dp"/>
+        <EditText
+            style="@style/TextStyle"
+            android:background="@drawable/edtbg"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/edts3"
+            android:hint="Slide 3"
+            android:paddingLeft="10dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/categorypanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Slide 4"
+                android:padding="10dp"/>
+            <EditText
+                style="@style/TextStyle"
+                android:background="@drawable/edtbg"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/edts4"
+                android:hint="Slide 4"
+                android:paddingLeft="10dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Slide 5"
+                android:padding="10dp"/>
+            <EditText
+                style="@style/TextStyle"
+                android:background="@drawable/edtbg"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/edts5"
+                android:hint="Slide 5"
+                android:paddingLeft="10dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/seriespanel"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <TextView
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Movie Series"
+                android:padding="10dp"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/series"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@color/successColor"
+                android:text="Save"
+                android:id="@+id/btnsave"
+                android:textColor="@color/colorWhite" />
+
+            <Button
+                android:id="@+id/btncancel"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@color/errorColor"
+                android:text="Cancel"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

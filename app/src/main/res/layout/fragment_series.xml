@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SeriesFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioGroup
+                android:id="@+id/findbycategory"
+                android:visibility="gone"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Movie Name"
+                    android:id="@+id/byMovieName"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CategoryName"
+                    android:id="@+id/byCategoryName"/>
+
+            </RadioGroup>
+            <EditText
+                style="@style/TextStyle"
+                android:background="@drawable/edtbg"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/search"
+                android:hint="Search Series"
+                android:paddingLeft="10dp"
+                android:drawableRight="@drawable/ic_search"
+                android:drawableTint="@color/colorPrimary"/>
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/rcList"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:elevation="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/add"
+            android:src="@drawable/ic_add"
+            android:layout_gravity="right"
+            android:backgroundTint="@color/colorPrimary"/>
+    </LinearLayout>
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/loading"
+        android:layout_gravity="center"/>
+
+</FrameLayout>

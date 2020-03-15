@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AdminPanel</string>
+    <string name="moviestr">Movie</string>
+    <string name="seriesstr">Series</string>
+    <string name="categorystr">Category</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="str_edit">Edit</string>
+    <string name="str_delete">Delete</string>
+</resources>

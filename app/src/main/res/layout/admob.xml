@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <LinearLayout
+        android:layout_margin="30dp"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_close"
+            android:tint="@color/errorColor"
+            android:layout_gravity="right"/>
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="App Id"
+            android:padding="10dp"/>
+        <EditText
+            style="@style/TextStyle"
+            android:background="@drawable/edtbg"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/edtappId"
+            android:hint="App Id"
+            android:paddingLeft="10dp"
+            />
+        <LinearLayout
+            android:id="@+id/imagepanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Banner Id"
+                android:padding="10dp"/>
+
+            <EditText
+                android:id="@+id/edtbannerId"
+                style="@style/TextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edtbg"
+                android:hint="Banner Id"
+                android:paddingLeft="10dp" />
+        </LinearLayout>
+        <TextView
+            style="@style/TextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Interstital Id"
+            android:padding="10dp"/>
+        <EditText
+            style="@style/TextStyle"
+            android:background="@drawable/edtbg"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/edtinterstialId"
+            android:hint="Interstital Id"
+            android:paddingLeft="10dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/categorypanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Reward Id"
+                android:padding="10dp"/>
+            <EditText
+                style="@style/TextStyle"
+                android:background="@drawable/edtbg"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/edtreward"
+                android:hint="Reward Id"
+                android:paddingLeft="10dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Native Id"
+                android:padding="10dp"/>
+            <EditText
+                style="@style/TextStyle"
+                android:background="@drawable/edtbg"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/edtnative"
+                android:hint="Native Id"
+                android:paddingLeft="10dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/seriespanel"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <TextView
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Movie Series"
+                android:padding="10dp"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/series"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@color/successColor"
+                android:text="Save"
+                android:id="@+id/btnsave"
+                android:textColor="@color/colorWhite" />
+
+            <Button
+                android:id="@+id/btncancel"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@color/errorColor"
+                android:text="Cancel"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
