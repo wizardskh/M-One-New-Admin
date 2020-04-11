@@ -49,6 +49,7 @@
             android:layout_height="wrap_content"
             android:text="Use Slide Show"/>
         <CheckBox
+            android:visibility="gone"
             android:id="@+id/useadmobsetting"
             android:padding="20dp"
             android:layout_width="match_parent"

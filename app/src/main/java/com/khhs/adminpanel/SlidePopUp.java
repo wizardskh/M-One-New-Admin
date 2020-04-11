@@ -60,7 +60,7 @@ public class SlidePopUp extends BottomSheetDialogFragment {
         s1 = myView.findViewById(R.id.edts1);
         s2 = myView.findViewById(R.id.edts2);
         s3= myView.findViewById(R.id.edts3);
-        s4 = myView.findViewById(R.id.edts5);
+        s4 = myView.findViewById(R.id.edts4);
         s5 = myView.findViewById(R.id.edts5);
     }
 

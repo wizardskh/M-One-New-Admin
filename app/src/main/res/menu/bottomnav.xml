@@ -14,4 +14,8 @@
         android:id="@+id/category"
         android:title="@string/categorystr"
         android:icon="@drawable/ic_category"/>
+    <item
+        android:id="@+id/requestmenu"
+        android:title="@string/request_str"
+        android:icon="@drawable/ic_request"/>
 </menu>

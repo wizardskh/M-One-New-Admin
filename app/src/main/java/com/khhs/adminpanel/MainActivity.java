@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
             splash_screen.setVisibility(View.GONE);
             data_panel.setVisibility(View.VISIBLE);
+            getSupportActionBar().show();
         }
     };
 
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnView = findViewById(R.id.bottomnav);
+        getSupportActionBar().hide();
         splashScreen();
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
@@ -81,6 +83,13 @@ public class MainActivity extends AppCompatActivity {
                     FragmentManager fm = getSupportFragmentManager();
                     FragmentTransaction ft = fm.beginTransaction();
                     ft.replace(R.id.mainframe,new CategoryFragment());
+                    ft.commit();
+                }
+                if(item.getItemId()==R.id.requestmenu)
+                {
+                    FragmentManager fm = getSupportFragmentManager();
+                    FragmentTransaction ft = fm.beginTransaction();
+                    ft.replace(R.id.mainframe,new RequestFragment());
                     ft.commit();
                 }
                 return false;
@@ -150,6 +159,8 @@ public class MainActivity extends AppCompatActivity {
             ft.replace(R.id.mainframe,new AboutFragment());
             ft.commit();
         }
+
+
         return true;
     }
 }
