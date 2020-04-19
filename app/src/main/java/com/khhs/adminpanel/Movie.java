@@ -37,6 +37,7 @@ public class Movie extends BottomSheetDialogFragment {
     Spinner spCategory,spSeries;
     LinearLayout seriespanel,imagepanel,categorypanel;
     Button btnsave,btncancel;
+    FirebaseFirestore db;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -100,7 +101,7 @@ public class Movie extends BottomSheetDialogFragment {
             }
         });
 
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
+         db = FirebaseFirestore.getInstance();
         CollectionReference categoryRef = db.collection("categories");
         CollectionReference seriesRef = db.collection("series");
         final ArrayList<String> categorynames = new ArrayList<String>();
@@ -167,7 +168,7 @@ public class Movie extends BottomSheetDialogFragment {
                    if(isEp.isChecked())
                    {
                        EpisodeModel model = new EpisodeModel();
-                       SimpleDateFormat format = new SimpleDateFormat("ddMMyyyyhhMMss");
+                       SimpleDateFormat format = new SimpleDateFormat("ddMMyyyyhhmmss");
                        model.createdAt = format.format(new Date());
                        model.episodeName = edtname.getText().toString().trim();
                        model.episodeSeries = seriesnames.get(spSeries.getSelectedItemPosition());
@@ -184,13 +185,13 @@ public class Movie extends BottomSheetDialogFragment {
                            Toasty.success(getContext(), "Episode Save Successfully!", Toasty.LENGTH_LONG).show();
 
                        }
-                       EpisodeFragment.loadData();
+
                        }
                    else
                    {
 
                        MovieModel model = new MovieModel();
-                       SimpleDateFormat format = new SimpleDateFormat("ddMMyyyyhhMMss");
+                       SimpleDateFormat format = new SimpleDateFormat("ddMMyyyyhhmmss");
                        model.createdAt = format.format(new Date());
                        model.movieName = edtname.getText().toString().trim();
                        model.movieCategory = categorynames.get(spCategory.getSelectedItemPosition());

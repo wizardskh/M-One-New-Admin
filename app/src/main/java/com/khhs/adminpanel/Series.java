@@ -105,7 +105,7 @@ public class Series  extends BottomSheetDialogFragment {
                 }
                 else {
                     SeriesModel model = new SeriesModel();
-                    SimpleDateFormat format = new SimpleDateFormat("ddMMyyyyhhMMss");
+                    SimpleDateFormat format = new SimpleDateFormat("ddMMyyyyhhmmss");
                     model.createdAt = format.format(new Date());
                     model.seriesName = edtname.getText().toString().trim();
                     model.seriesImage = edtimage.getText().toString().trim();
