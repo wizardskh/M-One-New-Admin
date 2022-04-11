@@ -84,6 +84,15 @@ public class MainActivity extends AppCompatActivity {
                     ft.replace(R.id.mainframe,new RequestFragment());
                     ft.commit();
                 }
+
+                if (item.getItemId() == R.id.live_tv_menu)
+                {
+                    FragmentManager fm = getSupportFragmentManager();
+                    FragmentTransaction ft = fm.beginTransaction();
+                    ft.replace(R.id.mainframe,new LiveFragment());
+                    ft.commit();
+
+                }
                 return false;
             }
         });

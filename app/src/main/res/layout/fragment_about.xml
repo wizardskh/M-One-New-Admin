@@ -15,10 +15,10 @@
            android:layout_height="match_parent"
            android:orientation="vertical">
            <ImageView
-               android:layout_width="wrap_content"
+               android:layout_width="150dp"
                android:layout_height="150dp"
                android:scaleType="centerCrop"
-               android:src="@drawable/itone"/>
+               android:src="@drawable/mone"/>
            <TextView
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
            <View
                android:layout_width="match_parent"
                android:layout_height="5dp"
-               android:background="@color/successColor"/>
+               android:background="@color/colorAccent"/>
            <TextView
                android:padding="20dp"
                android:layout_width="match_parent"
@@ -45,49 +45,32 @@
            <View
                android:layout_width="match_parent"
                android:layout_height="5dp"
-               android:background="@color/successColor"/>
+               android:background="@color/colorAccent"/>
            <TextView
                android:padding="20dp"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:text="Khin Htet Htet Hsu"
+               android:text="TPT"
                android:textStyle="bold"
                android:textSize="20sp"/>
            <TextView
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:text="Email "
+               android:text="Our Facebook Page"
                android:textSize="30sp"
                android:textStyle="bold"/>
            <View
                android:layout_width="match_parent"
                android:layout_height="5dp"
-               android:background="@color/successColor"/>
+               android:background="@color/colorAccent"/>
            <TextView
                android:padding="20dp"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:text="itomemm@gmail.com"
+               android:text="TPT Channel"
                android:textStyle="bold"
                android:textSize="20sp"/>
 
-           <TextView
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:text="Phone "
-               android:textSize="30sp"
-               android:textStyle="bold"/>
-           <View
-               android:layout_width="match_parent"
-               android:layout_height="5dp"
-               android:background="@color/successColor"/>
-           <TextView
-               android:padding="20dp"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:text="09976375970"
-               android:textStyle="bold"
-               android:textSize="20sp"/>
 
        </LinearLayout>
    </ScrollView>

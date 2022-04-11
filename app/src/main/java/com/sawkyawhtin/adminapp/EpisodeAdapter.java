@@ -20,14 +20,19 @@ import es.dmoral.toasty.Toasty;
 
 public class EpisodeAdapter extends RecyclerView.Adapter<EpisodeAdapter.EpisodeHolder> {
 
+    ArrayList<SeriesModel>  seriesModels = new ArrayList<>();  //  test ep
+
     ArrayList<EpisodeModel> models = new ArrayList<>();
     Context context;
     FragmentManager fragmentManager;
+//    CheckBox isEp;    //   testep
+
 
     public EpisodeAdapter(ArrayList<EpisodeModel> models, Context context, FragmentManager fragmentManager) {
         this.models = models;
         this.context = context;
         this.fragmentManager = fragmentManager;
+//        this.isEp = isEp;   //   test  ep
     }
 
     @NonNull
@@ -41,23 +46,42 @@ public class EpisodeAdapter extends RecyclerView.Adapter<EpisodeAdapter.EpisodeH
     @Override
     public void onBindViewHolder(@NonNull final EpisodeHolder holder, final int position) {
 
-        holder.sr.setText(position+1+"");
+//        EpisodeModel model = models.get(position);    //  test  ep
+//        holder.sr.setText(position + 1 + "");
+//        holder.name.setText(categoryModels.get(position).categoryName);
+//        holder.options.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                PopupMenu popupMenu = new PopupMenu(context, holder.options);
+//                MenuInflater inflater = popupMenu.getMenuInflater();
+//                inflater.inflate(R.menu.popmenu, popupMenu.getMenu());
+//                popupMenu.show();
+
+//        isEp.setOnClickListener(new View.OnClickListener() {      //   test   ep
+//            @Override
+//            public void onClick(View v) {
+//
+//                isEp.setEnabled(false);
+//
+//            }           //
+//        });                //
+
+        holder.sr.setText(position + 1 + "");
         holder.name.setText(models.get(position).episodeName);
         holder.options.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopupMenu popupMenu = new PopupMenu(context,holder.options);
-                popupMenu.getMenuInflater().inflate(R.menu.popmenu,popupMenu.getMenu());
-                popupMenu.show();;
+                PopupMenu popupMenu = new PopupMenu(context, holder.options);
+                popupMenu.getMenuInflater().inflate(R.menu.popmenu, popupMenu.getMenu());
+                popupMenu.show();
+                ;
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
-                        if(item.getItemId() == R.id.edit_menu)
-                        {
+                        if (item.getItemId() == R.id.edit_menu) {
 
                         }
-                        if(item.getItemId() == R.id.delete_menu)
-                        {
+                        if (item.getItemId() == R.id.delete_menu) {
                             AlertDialog.Builder builder = new AlertDialog.Builder(context);
                             builder.setTitle("Confirmation!")
                                     .setMessage("Are you Sure To Delete?")
@@ -65,7 +89,7 @@ public class EpisodeAdapter extends RecyclerView.Adapter<EpisodeAdapter.EpisodeH
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
                                             EpisodeFragment.deleteEpisode(position);
-                                            Toasty.success(context,"Episode Deleted Successfully!",Toasty.LENGTH_LONG).show();
+                                            Toasty.success(context, "Episode Deleted Successfully!", Toasty.LENGTH_LONG).show();
                                         }
                                     })
                                     .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -75,13 +99,11 @@ public class EpisodeAdapter extends RecyclerView.Adapter<EpisodeAdapter.EpisodeH
                                         }
                                     });
                             builder.show();
-                        }
-                        else
-                        {
+                        } else {
                             Movie popup = new Movie();
                             popup.edit_epModel = models.get(position);
                             popup.id = EpisodeFragment.epIds.get(position);
-                            popup.show(fragmentManager,"Edit Episode");
+                            popup.show(fragmentManager, "Edit Episode");
                         }
 
                         return true;
@@ -89,6 +111,8 @@ public class EpisodeAdapter extends RecyclerView.Adapter<EpisodeAdapter.EpisodeH
                 });
             }
         });
+
+
     }
 
     @Override
@@ -96,10 +120,10 @@ public class EpisodeAdapter extends RecyclerView.Adapter<EpisodeAdapter.EpisodeH
         return models.size();
     }
 
-    public class EpisodeHolder extends  RecyclerView.ViewHolder
-    {
-        TextView sr,name;
+    public class EpisodeHolder extends RecyclerView.ViewHolder {
+        TextView sr, name;    //   episode item
         ImageView options;
+
         public EpisodeHolder(@NonNull View itemView) {
             super(itemView);
             sr = itemView.findViewById(R.id.sr);
@@ -110,3 +134,5 @@ public class EpisodeAdapter extends RecyclerView.Adapter<EpisodeAdapter.EpisodeH
     }
 
 }
+
+

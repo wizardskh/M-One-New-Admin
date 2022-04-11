@@ -18,4 +18,9 @@
         android:id="@+id/requestmenu"
         android:title="@string/request_str"
         android:icon="@drawable/ic_request"/>
+
+    <item
+        android:id="@+id/live_tv_menu"
+        android:icon="@drawable/ic_livetv"
+        android:title="LiveTv" />
 </menu>
